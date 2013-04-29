@@ -33,3 +33,5 @@ nmap <leader>ga gg=G
 nmap <leader>bn :bn<CR>
 nmap <leader>bp :bp<CR>
 nmap <leader>bd :bp\|bd#<CR>
+
+set rtp+=/root/.local/lib/python2.7/site-packages/powerline/bindings/vim

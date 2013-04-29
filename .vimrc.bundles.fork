@@ -15,7 +15,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'spf13/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'matchit.zip'
-Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
