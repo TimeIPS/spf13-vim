@@ -5,7 +5,7 @@ let g:spf13_no_autochdir = 1
 set noautochdir
 
 " Override all optional bundles with this list
-let g:override_spf13_bundles
+let g:override_spf13_bundles = 1
 
 " General
 Bundle 'scrooloose/nerdtree'
