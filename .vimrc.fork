@@ -1,0 +1,35 @@
+color ir_black
+highlight clear SignColumn
+
+set mouse=
+set nospell
+
+let g:spf13_no_keyfixes = 1
+let g:spf13_keep_trailing_whitespace = 1
+
+" For when we want to use tagbar
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+
+let NERDTreeQuitOnOpen=0
+
+" Options for powerline
+set encoding=utf-8
+
+" Remap Ctrl-Alt-x to Ctrl-a so we can increment numbers within screen/tmux
+nmap  
+
+" Easy align arrays
+nmap <Leader>a> :Tabularize /=><CR>
+vmap <Leader>a> :Tabularize /=><CR>
+
+" Fold all the things
+nmap <leader>ff :EnableFastPHPFolds<CR>
+
+" Easy auto format the file
+nmap <leader>ga gg=G
+
+" Faster buffer navigation
+nmap <leader>bn :bn<CR>
+nmap <leader>bp :bp<CR>
+nmap <leader>bd :bp\|bd#<CR>

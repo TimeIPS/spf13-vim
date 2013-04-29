@@ -1,0 +1,57 @@
+" Leave me in the directory where I invoke vim
+" This option must be set here in the bundles file
+" because of where it is referenced in .vimrc
+let g:spf13_no_autochdir = 1
+set noautochdir
+
+" Override all optional bundles with this list
+let g:override_spf13_bundles
+
+" General
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'spf13/vim-colors'
+Bundle 'tpope/vim-surround'
+Bundle 'spf13/vim-autoclose'
+Bundle 'kien/ctrlp.vim'
+Bundle 'matchit.zip'
+Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'godlygeek/csapprox'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'mbbill/undotree'
+Bundle 'vim-scripts/restore_view.vim'
+Bundle 'airblade/vim-gitgutter'
+
+" General Programming
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular'
+Bundle 'majutsushi/tagbar'
+
+" Snippets & AutoComplete
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
+Bundle 'honza/vim-snippets'
+
+" PHP
+Bundle 'spf13/PIV'
+
+" Python
+Bundle 'klen/python-mode'
+Bundle 'python.vim'
+Bundle 'python_match.vim'
+
+" Javascript
+Bundle 'leshill/vim-json'
+Bundle 'pangloss/vim-javascript'
+
+" HTML
+Bundle 'hail2u/vim-css3-syntax'
+
+" Twig
+Bundle 'beyondwords/vim-twig'
+
