@@ -7,6 +7,11 @@ set noautochdir
 " Override all optional bundles with this list
 let g:override_spf13_bundles = 1
 
+" Define that we are using neocomplete instead of neocomplcache. This is
+" necessary even though we are overriding all bundles because .vimrc keys off
+" this variable to define additional configuration parameters
+let g:spf13_bundle_groups=['neocomplete']
+
 " General
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
@@ -32,7 +37,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 
 " Snippets & AutoComplete
-Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplete.vim.git'
 Bundle 'Shougo/neosnippet'
 Bundle 'honza/vim-snippets'
 
