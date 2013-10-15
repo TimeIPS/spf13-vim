@@ -1,4 +1,4 @@
-color ir_black
+color molokai
 highlight clear SignColumn
 
 set mouse=
@@ -39,3 +39,5 @@ set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 
 " Disable autoclose by default
 let g:autoclose_on = 0
+
+let g:gitgutter_realtime = 0
