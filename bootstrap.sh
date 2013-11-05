@@ -13,12 +13,12 @@ msg() {
 
 success() {
     if [ "$ret" -eq '0' ]; then
-    msg "\e[32m[✔]\033[0m ${1}${2}"
+    msg "\e[32m[✔]\e[0m ${1}${2}"
     fi
 }
 
 error() {
-    msg "\e[31m[✘]\033[0m ${1}${2}"
+    msg "\e[31m[✘]\e[0m ${1}${2}"
     exit 1
 }
 
@@ -105,8 +105,13 @@ clone_vundle() {
 create_symlinks() {
     endpath="$HOME/.$app_name-3"
 
+    if [ ! -d "$endpath/.vim/bundle" ]; then
+        mkdir -p "$endpath/.vim/bundle"
+    fi
+
     lnif "$endpath/.vimrc"              "$HOME/.vimrc"
     lnif "$endpath/.vimrc.bundles"      "$HOME/.vimrc.bundles"
+    lnif "$endpath/.vimrc.before"       "$HOME/.vimrc.before"
     lnif "$endpath/.vim"                "$HOME/.vim"
 
     # Useful for fork maintainers
@@ -115,16 +120,17 @@ create_symlinks() {
     if [ -e "$endpath/.vimrc.fork" ]; then
         ln -sf "$endpath/.vimrc.fork" "$HOME/.vimrc.fork"
     elif [ "$fork_maintainer" -eq '1' ]; then
-       touch "$HOME/.vimrc.fork"
-       touch "$HOME/.vimrc.bundles.fork"
+        touch "$HOME/.vimrc.fork"
+        touch "$HOME/.vimrc.bundles.fork"
+        touch "$HOME/.vimrc.before.fork"
     fi
 
     if [ -e "$endpath/.vimrc.bundles.fork" ]; then
         ln -sf "$endpath/.vimrc.bundles.fork" "$HOME/.vimrc.bundles.fork"
     fi
 
-    if [ ! -d "$endpath/.vim/bundle" ]; then
-        mkdir -p "$endpath/.vim/bundle"
+    if [ -e "$endpath/.vimrc.before.fork" ]; then
+        ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vimrc.before.fork"
     fi
 
     ret="$?"
@@ -145,12 +151,12 @@ setup_vundle() {
 ############################ MAIN()
 program_exists "vim" "To install $app_name you first need to install Vim."
 
-do_backup   "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d_%s`" \
+do_backup   "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d%S`" \
         "$HOME/.vim" \
         "$HOME/.vimrc" \
         "$HOME/.gvimrc"
 
-clone_repo  "Successfully cloned $app_name"
+clone_repo      "Successfully cloned $app_name"
 
 create_symlinks "Setting up vim symlinks"
 
@@ -158,5 +164,5 @@ clone_vundle    "Successfully cloned vundle"
 
 setup_vundle    "Now updating/installing plugins using Vundle"
 
-msg         "\nThanks for installing $app_name."
-msg     "© `date +%Y` http://vim.spf13.com/"
+msg             "\nThanks for installing $app_name."
+msg             "© `date +%Y` http://vim.spf13.com/"
