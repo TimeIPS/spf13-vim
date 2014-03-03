@@ -1,4 +1,4 @@
-color molokai
+color peaksea
 highlight clear SignColumn
 
 set mouse=
@@ -25,6 +25,7 @@ vmap <Leader>a> :Tabularize /=><CR>
 
 " Fold all the things
 nmap <leader>ff :EnableFastPHPFolds<CR>
+nmap <leader>fs :syn sync fromstart<CR>
 
 " Easy auto format the file
 nmap <leader>ga gg=G
