@@ -22,7 +22,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
-Bundle 'vim-markdown'
+"Bundle 'vim-markdown' " Asking for password
 
 " PHP
 Bundle 'spf13/PIV'
@@ -39,7 +39,7 @@ Bundle 'pangloss/vim-javascript'
 
 " HTML
 Bundle 'hail2u/vim-css3-syntax'
-Bundle 'vim-coloresque'
+"Bundle 'vim-coloresque' " Asking for password
 Bundle 'vim-less'
 
 " Twig
