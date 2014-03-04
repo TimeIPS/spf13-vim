@@ -1,23 +1,5 @@
-" Leave me in the directory where I invoke vim
-" This option must be set here in the bundles file
-" because of where it is referenced in .vimrc
-let g:spf13_no_autochdir = 1
-set noautochdir
-
-" Override all optional bundles with this list
-let g:override_spf13_bundles = 1
-let g:spf13_bundle_groups=[]
-
 " General
-if executable('ack-grep')
-    let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-    Bundle 'mileszs/ack.vim'
-elseif executable('ack')
-    Bundle 'mileszs/ack.vim'
-elseif executable('ag')
-    Bundle 'mileszs/ack.vim'
-    let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
-endif
+Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'spf13/vim-colors'
@@ -41,9 +23,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
+Bundle 'vim-markdown'
 
 " PHP
 Bundle 'spf13/PIV'
+Bundle 'vim-php-namespace'
 
 " Python
 Bundle 'klen/python-mode'
@@ -56,6 +40,11 @@ Bundle 'pangloss/vim-javascript'
 
 " HTML
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'vim-coloresque'
+Bundle 'vim-less'
 
 " Twig
 Bundle 'beyondwords/vim-twig'
+
+" Puppet
+Bundle 'Puppet-Syntax-Highlighting'

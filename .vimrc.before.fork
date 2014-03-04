@@ -1,0 +1,21 @@
+" Leave me in the directory where I invoke vim
+" This option must be set here not in .vimrc.fork
+let g:spf13_no_autochdir = 1
+set noautochdir
+
+" Disable wrap relative motion for start/end line motions
+let g:spf13_no_wrapRelMotion = 1
+
+" This makes the completion popup strictly passive.
+" Keypresses acts normally. <ESC> takes you of insert mode, words don't
+" automatically complete, pressing <CR> inserts a newline, etc. Iff the
+" menu is open, tab will cycle through it. If a snippet is selected, <C-k>
+" expands it and jumps between fields.
+let g:spf13_noninvasive_completion = 1
+
+" Don't turn conceallevel or concealcursor
+let g:spf13_no_conceal = 1
+
+" Disable all optional bundles as we'll define our own
+let g:override_spf13_bundles = 1
+let g:spf13_bundle_groups=[]

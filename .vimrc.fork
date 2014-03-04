@@ -13,18 +13,17 @@ let g:tagbar_autoclose = 1
 
 let NERDTreeQuitOnOpen=0
 
-" Options for powerline
-set encoding=utf-8
-
-" Remap Ctrl-Alt-x to Ctrl-a so we can increment numbers within screen/tmux
-nmap  
-
 " Easy align arrays
 nmap <Leader>a> :Tabularize /=><CR>
 vmap <Leader>a> :Tabularize /=><CR>
 
-" Fold all the things
+" Option to fold everything
 nmap <leader>ff :EnableFastPHPFolds<CR>
+" But please don't fold unless I ask
+let g:DisableAutoPHPFolding = 1
+set foldlevelstart=99
+
+" Mapping to fix syntax for the whole file
 nmap <leader>fs :syn sync fromstart<CR>
 
 " Easy auto format the file
@@ -36,9 +35,9 @@ nmap <leader>bp :bp<CR>
 nmap <leader>bd :bp\|bd#<CR>
 
 " Powerline
+set encoding=utf-8
 set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 
 " Disable autoclose by default
 let g:autoclose_on = 0
 
-let g:gitgutter_realtime = 0
