@@ -19,3 +19,7 @@ let g:spf13_no_conceal = 1
 " Disable all optional bundles as we'll define our own
 let g:override_spf13_bundles = 1
 let g:spf13_bundle_groups=[]
+
+" Disable spf13's Enhancements to Omni Completion
+" These have the side effect of breaking arrow keys when you're in insert mode
+let g:spf13_no_omni_complete = 1
