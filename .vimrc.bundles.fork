@@ -22,6 +22,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline'
 "Bundle 'vim-markdown' " Asking for password
 
 " PHP

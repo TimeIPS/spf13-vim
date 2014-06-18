@@ -1,6 +1,13 @@
 color peaksea
 highlight clear SignColumn
 
+" Set the airline theme
+let g:airline_theme = 'bubblegum'
+function! AddCustomerToAirline()
+    let g:airline_section_z=g:airline_section_z . " " . $TIMEIPS_CUSTOMER
+endfunction
+autocmd VimEnter * call AddCustomerToAirline()
+
 set mouse=
 set nospell
 
@@ -34,10 +41,5 @@ nmap <leader>bn :bn<CR>
 nmap <leader>bp :bp<CR>
 nmap <leader>bd :bp\|bd#<CR>
 
-" Powerline
-set encoding=utf-8
-set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
-
 " Disable autoclose by default
 let g:autoclose_on = 0
-
