@@ -1,18 +1,42 @@
 color bubblegum
 highlight clear SignColumn
 
-" Set the airline theme
-let g:airline_theme = 'bubblegum'
+set lazyredraw
+set background=dark
+colorscheme solarized
+
+" speed up airline we dont really need any other extensions
+let g:airline_extensions = ['branch', 'ctrlp']
+
 function! AddCustomerToAirline()
     let g:airline_section_z=g:airline_section_z . " " . $TIMEIPS_CUSTOMER
 endfunction
 autocmd VimEnter * call AddCustomerToAirline()
+
+" define airline symbols
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" dont bother with symbols that need specific fonts
+let g:airline_symbols.branch = '⎇'
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = ']'
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = '['
+
+" Put Syntastic in passive mode (you can enable active mode with :SyntasticToggleMode)
+let g:syntastic_mode_map = { 'mode': 'passive' }
 
 set mouse=
 set nospell
 
 let g:spf13_no_keyfixes = 1
 let g:spf13_keep_trailing_whitespace = 1
+
+" custom ctrp ignore settings add node_modules
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\node_modules$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 
 " For when we want to use tagbar
 let g:tagbar_autofocus = 1

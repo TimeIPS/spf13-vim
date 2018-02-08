@@ -1,5 +1,4 @@
 " General
-Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'spf13/vim-colors'
 Bundle 'tpope/vim-surround'
@@ -9,7 +8,6 @@ Bundle 'matchit.zip'
 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/csapprox'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'mbbill/undotree'
 Bundle 'vim-scripts/restore_view.vim'
@@ -22,15 +20,16 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'vim-markdown' " Asking for password
 
 " PHP
-Bundle 'spf13/PIV'
+" Bundle 'spf13/PIV' " WAY to slow
 Bundle 'vim-php-namespace'
 
 " Python
-Bundle 'klen/python-mode'
+" Bundle 'klen/python-mode'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
 
